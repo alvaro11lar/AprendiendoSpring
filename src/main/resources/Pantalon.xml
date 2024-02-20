@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+ 
+	<bean id="pantalon" class="beans.Pantalon"
+			depends-on="boton">
+		<property name="id" value="1"/>
+		<property name="talla" value="36"/>
+		<property name="color" value="azul"/>
+		<property name="precio" value="200"/>
+		<property name="boton" ref="boton"/>
+	</bean>
+	
+<!--  	<bean id="textEditor" class="com.curso.pojos.TextEditor">
+		<property name="spellChecker">
+			<ref bean="spellCheckerRef"></ref>
+		</property>
+	</bean>  -->
+	<bean id="boton" class="beans.Boton">
+		<property name="id" value="1"/>
+		<property name="forma" value="redondo"/>
+		<property name="tamanio" value="200"/>
+		<property name="color" value="azul"/>
+	</bean>
+ </beans> 
